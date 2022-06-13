@@ -9,7 +9,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
   // displays sidebar
-  const { activeMenu } = useStateContext();
+  const { activeMenu, setActiveMenu } = useStateContext();
 
   
 
