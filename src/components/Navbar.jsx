@@ -34,12 +34,16 @@ const Navbar = () => {
   const { activeMenu, setActiveMenu, handleClick } = useStateContext();
   return (
     <div className='flex justify-between p-2 md:mx-6 relative'>
+      
+      {/* Sidebar Menu */}
       <NavButton 
-        title='Menu' 
+        title='Sidebar menu' 
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} 
         color='blue'
         icon={<AiOutlineMenu />} 
       />
+
+      {/* Cart */}
       <div className='flex'>
         <NavButton 
           title='Cart' 
@@ -47,6 +51,8 @@ const Navbar = () => {
           color='blue'
           icon={<FiShoppingCart />} 
         />
+
+        {/* Chat */}
         <NavButton 
           title='Chat'
           dotColor='03C907' 
@@ -54,12 +60,16 @@ const Navbar = () => {
           color='blue'
           icon={<BsChatLeft />} 
         />
+
+        {/* Notifications */}
         <NavButton 
           title='Notifications' 
           customFunc={() => handleClick('notification')} 
           color='blue'
           icon={<RiNotification3Line />} 
         />
+
+        {/* User Profile */}
         <TooltipComponent
           content="User Profile"
           position='BottomCenter'
@@ -68,17 +78,26 @@ const Navbar = () => {
             className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg'
             onClick={() => handleClick('userProfile')}
           >
+
+            {/* PFP */}
             <img
               className='rounded-full w-8 h-8'
               src={avatar}
               alt='User Profile'
             />
+
+            {/* Greeting */}
             <p>
               <span className='text-gray-400 text-14'>Hi,</span> {' '}
               <span className='text-gray-400 font-bold ml-1 text-14'>Michael</span>
             </p>
+
+            {/* Drop-down Menu */}
+            <MdKeyboardArrowDown className='text-gray-400 text-14' />
+            
           </div>
         </TooltipComponent>
+
       </div>
     </div>
   )
