@@ -73,6 +73,20 @@ const Ecommerce = () => {
           ))}
         </div>
       </div>
+      
+      {/* revenue updates */}
+      
+      {/* card */}
+      <div className='flex gap-10 flex-wrap justify-center'>
+        
+        {/* background */}
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
+          <div className='flex justify-between'>
+            <p>Revenue Updates</p>
+            
+          </div>
+        </div>
+      </div>
     </div>
   )
 };
