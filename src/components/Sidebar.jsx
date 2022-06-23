@@ -22,13 +22,13 @@ const Sidebar = () => {
   const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
 
   return (
-    // Sidebar div
+    // Sidebar container
     <div className='ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10'>
       
       {/* Sidebar active */}
       {activeMenu && (<>
       
-      {/* hero icon div */}
+      {/* hero icon container */}
       <div className='flex justify-between items-center'>
         <Link 
           to='/' 
@@ -46,19 +46,20 @@ const Sidebar = () => {
             <MdOutlineCancel />
           </button>
         </TooltipComponent>
+
       </div>
 
-      {/* Sidebar menu sections & nav links */}
+      {/* Sidebar menu containers & site links */}
       <div className='mt-10'>
         
-        {/* sections */}
+        {/* pages */}
         {links.map((item) => (
           <div key={item.title}>
             <p className='text-gray-400 m-3 mt-4 uppercase'>
               {item.title}
             </p>
 
-            {/* dynamically sets active & inactive nav links */}
+            {/* state setting for active & inactive site links */}
             {item.links.map((link) => (
               <NavLink
                 to={`/${link.name}`}
@@ -67,6 +68,7 @@ const Sidebar = () => {
                 className={({ isActive }) => 
               isActive ? activeLink : normalLink}
               >
+
                 {/* link icons */}
                 {link.icon}
 
@@ -76,10 +78,13 @@ const Sidebar = () => {
                 </span>
               </NavLink>
             ))}
+
           </div>
         ))}
+        
       </div>
       </>)}
+
     </div>
   )
 };
