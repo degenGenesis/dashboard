@@ -11,7 +11,7 @@ const Ecommerce = () => {
     <div className='mt-12'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
         
-        {/* hero image */}
+        {/* earnings container */}
         <div className='
           bg-white dark:text-gray-200 dark:bg-secondary-dark-bg 
           h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 
@@ -38,17 +38,17 @@ const Ecommerce = () => {
           </div>
         </div>
 
-        {/* cards */}
-
-        {/* earningdata */}
+        {/* revenue sources container */}
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
+        
+        {/* revenue sources */}
           {earningData.map((item) => (
             <div
               key={item.title}
               className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'
             >
 
-              {/* button */}
+              {/* revenue source buttons */}
               <button 
                 type='button'
                 style={{ color: item.iconColor, backgroundColor: item.iconBg }}
@@ -60,7 +60,7 @@ const Ecommerce = () => {
               {/* financial data */}
               <p className='mt-3'>
                 <span className='text-lg font-semibold'>
-                  {item.amount}
+                 $ {item.amount}
                 </span>
                 <span className={`text-sm text-${item.pcColor} ml-2`}>
                   {item.percentage}
@@ -75,8 +75,6 @@ const Ecommerce = () => {
       </div>
       
       {/* revenue updates */}
-      
-      {/* revenue updates */}
       <div className='flex gap-10 flex-wrap justify-center'>
         
         {/* background container */}
@@ -85,7 +83,11 @@ const Ecommerce = () => {
           {/* container */}
           <div className='flex justify-between'>
             <p className='font-semibold text-xl'>Revenue Updates</p>
+            
+            {/* container */}
             <div className='flex items-center gap-4'>
+              
+              {/* expense */}
               <p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl'>
                 <span>
                   <GoPrimitiveDot />
@@ -94,6 +96,8 @@ const Ecommerce = () => {
                   Expense
                 </span>
               </p>
+
+              {/* budget */}
               <p className='flex items-center gap-2 text-green-400 hover:drop-shadow-xl'>
                 <span>
                   <GoPrimitiveDot />
@@ -102,6 +106,7 @@ const Ecommerce = () => {
                   Budget
                 </span>
               </p>
+
             </div>
           </div>
         </div>
