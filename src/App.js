@@ -17,10 +17,12 @@ const App = () => {
     <div>
       <BrowserRouter>
         
-        {/* settings container */}
+        {/* body container */}
         <div 
           className="flex relative dark:bg-main-dark-bg"
-        >
+          >
+          
+          {/* settings container */}
           <div 
             className="fixed right-4 bottom-4" 
             style={{ zIndex: '1000' }}
@@ -58,7 +60,7 @@ const App = () => {
             <div 
               className={ 
                 activeMenu
-                ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-full'
+                ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen w-full'
                 : 'bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 '
               }
             >

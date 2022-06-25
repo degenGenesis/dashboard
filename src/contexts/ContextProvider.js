@@ -14,9 +14,9 @@ const initialState = {
 export const ContextProvider = ({ children }) => {
   
   // State Variables Sidebar Menu, Menu Links, Screen Width
+  const [screenSize, setScreenSize] = useState(undefined);
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
-  const [screenSize, setScreenSize] = useState(undefined);
 
   // Event Handling
   const handleClick = (clicked) => {

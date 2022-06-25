@@ -26,7 +26,8 @@ const Sidebar = () => {
     <div className='ml-3 h-screen md:overflow-hidden overflow-auto md:hover:overflow-auto pb-10'>
       
       {/* Sidebar active */}
-      {activeMenu && (<>
+      {activeMenu && (
+        <>
       
       {/* hero icon container */}
       <div className='flex justify-between items-center'>
