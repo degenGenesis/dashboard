@@ -20,7 +20,7 @@ const App = () => {
         {/* body container */}
         <div 
           className="flex relative dark:bg-main-dark-bg"
-          >
+        >
           
           {/* settings container */}
           <div 
@@ -60,7 +60,7 @@ const App = () => {
             <div 
               className={ 
                 activeMenu
-                ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen  w-full'
+                ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen md:w-auto flex-shrink'
                 : 'bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 '
               }
             >
