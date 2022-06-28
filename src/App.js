@@ -11,6 +11,8 @@ import { useStateContext } from './contexts/ContextProvider';
 import './App.css';
 
 const App = () => {
+  
+  // state variables
   const { activeMenu } = useStateContext();
   
   return (
@@ -60,7 +62,7 @@ const App = () => {
             <div 
               className={ 
                 activeMenu
-                ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen md:w-auto flex-shrink'
+                ? 'dark:bg-main-dark-bg  bg-main-bg min-h-screen md:ml-72 w-auto'
                 : 'bg-main-bg dark:bg-main-dark-bg  w-full min-h-screen flex-2 '
               }
             >

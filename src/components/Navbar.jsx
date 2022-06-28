@@ -11,6 +11,8 @@ import { Cart, Chat, Notification, UserProfile } from '.';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
+  
+  // hanburger menu icon
   <TooltipComponent 
     content={title}
     position='BottomCenter'>
@@ -30,10 +32,11 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 )
 
 const Navbar = () => {
-  // Properties
+  
+  // state variables
   const { activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, screenSize, setScreenSize } = useStateContext();
 
-  // Responsive Sidebar
+  // event handling
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth);
 
@@ -55,7 +58,7 @@ const Navbar = () => {
   return (
     <div className='flex justify-between p-2 md:ml-6 md:mr-6 relative'>
       
-      {/* Sidebar Menu */}
+      {/* hamburger menu */}
       <NavButton 
         title='Sidebar menu' 
         customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} 

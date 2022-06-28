@@ -9,6 +9,7 @@ import { useStateContext } from '../contexts/ContextProvider';
 
 const Sidebar = () => {
   
+  // state variables
   const { activeMenu, setActiveMenu, screenSize } = useStateContext();
 
   const handleCloseSidebar = () => {
@@ -17,7 +18,7 @@ const Sidebar = () => {
     } 
   };
 
-  // defines & styles active & inactive nav links 
+  // global variables 
   const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2';
   const normalLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 dark:text-gray-200 dark:hover:text-black hover:bg-light-gray m-2';
 
@@ -50,7 +51,7 @@ const Sidebar = () => {
 
       </div>
 
-      {/* Sidebar menu containers & site links */}
+      {/* Sidebar menu containers & internal links */}
       <div className='mt-10'>
         
         {/* pages */}
