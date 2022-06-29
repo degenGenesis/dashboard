@@ -73,7 +73,7 @@ const App = () => {
               </div>
             
             {/* Theme Settings */}
-            {/* {themeSettings && (<ThemeSettings />)} */}
+            {themeSettings && (<ThemeSettings />)}
             
             {/* routes */}
             <div>
