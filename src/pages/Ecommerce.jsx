@@ -119,6 +119,9 @@ const Ecommerce = () => {
 
             </div>
           </div>
+          <div className='mt-10 flex gap-10 flex-wrap justify-center'>
+
+          </div>
         </div>
       </div>
     </div>
