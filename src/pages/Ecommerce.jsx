@@ -134,6 +134,9 @@ const Ecommerce = () => {
                     233%
                   </span>
                 </p>
+                <p className='text-gray-500 mt-1'>
+                  Budget
+                </p>
               </div>
               <div>
                 <p>
@@ -143,6 +146,9 @@ const Ecommerce = () => {
                   <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-gray-600 ml-3 text-xs'>
                     233%
                   </span>
+                </p>
+                <p className='text-gray-500 mt-1'>
+                  Expense
                 </p>
               </div>
             </div>
