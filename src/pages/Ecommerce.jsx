@@ -126,6 +126,8 @@ const Ecommerce = () => {
               
               {/* Budget data container */}
               <div>
+                
+                {/* budget */}
                 <p>
                   <span className='text-3xl font-semibold'>
                     $93,438
@@ -138,6 +140,8 @@ const Ecommerce = () => {
                   Budget
                 </p>
               </div>
+
+              {/* expense */}
               <div>
                 <p>
                   <span className='text-3xl font-semibold'>
