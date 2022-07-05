@@ -90,14 +90,14 @@ const Ecommerce = () => {
         {/* revenue updates container */}
         <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780'>
 
-          {/* container */}
+          {/* title container */}
           <div className='flex justify-between'>
             <p className='font-semibold text-xl'>Revenue Updates</p>
             
-            {/* container */}
+            {/* key container */}
             <div className='flex items-center gap-4'>
               
-              {/* expense */}
+              {/* expense key */}
               <p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl'>
                 <span>
                   <GoPrimitiveDot />
@@ -107,7 +107,7 @@ const Ecommerce = () => {
                 </span>
               </p>
 
-              {/* budget */}
+              {/* budget key */}
               <p className='flex items-center gap-2 text-green-400 hover:drop-shadow-xl'>
                 <span>
                   <GoPrimitiveDot />
