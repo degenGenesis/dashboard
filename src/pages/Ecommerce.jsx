@@ -141,7 +141,7 @@ const Ecommerce = () => {
                 </p>
               </div>
 
-              {/* expense data container */}
+              {/* Expense data container */}
               <div className='mt-8'>
 
                 {/* expense */}
