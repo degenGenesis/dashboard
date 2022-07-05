@@ -141,8 +141,10 @@ const Ecommerce = () => {
                 </p>
               </div>
 
-              {/* expense */}
+              {/* expense data container */}
               <div className='mt-8'>
+
+                {/* expense */}
                 <p>
                   <span className='text-3xl font-semibold'>
                     $48,107
