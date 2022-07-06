@@ -154,6 +154,11 @@ const Ecommerce = () => {
                   Expense
                 </p>
               </div>
+
+              {/* sparkline chart */}
+              <div className=''>
+
+              </div>
             </div>
           </div>
 
