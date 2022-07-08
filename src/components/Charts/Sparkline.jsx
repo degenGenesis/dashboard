@@ -16,7 +16,8 @@ const Sparkline = ({ id, height, width, color, data, type, currentColor }) => {
       xName='x'
       yName='yval'
       type={type}
-      tooltipSettings={{
+      // displays chart data on hover
+      tooltipSettings={{ 
         visible: true,
         format: '${x} : data ${yval}',
         trackLineSettings: {
