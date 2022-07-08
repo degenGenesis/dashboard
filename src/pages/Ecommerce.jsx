@@ -1,8 +1,8 @@
 import React from 'react';
-import { BsCurrencyDollary } from 'react-icons/bs';
+import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
 
-import { Stacked, Pie, Button, SparkLine } from '../components';
+import { Stacked, Pie, Button, Sparkline } from '../components';
 import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
@@ -24,7 +24,7 @@ const Ecommerce = () => {
           <div className='flex justify-between items-center'>
             <div>
               <p className='font-bold text-gray-400'>Earnings</p>
-              <p className='text-xl'>$250,420.00</p>
+              <p className='text-2xl'>$250,420.00</p>
             </div>
           </div>
 
@@ -35,7 +35,7 @@ const Ecommerce = () => {
               bgColor='blue'
               text='Download'
               borderRadius='10px'
-              size='xl'
+              // size='xl'
             />
           </div>
         </div>
@@ -47,7 +47,7 @@ const Ecommerce = () => {
           {earningData.map((item) => (
             <div
               key={item.title}
-              className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'
+              className='bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'
             >
 
               {/* revenue source buttons */}
@@ -133,7 +133,7 @@ const Ecommerce = () => {
                     $93,438
                   </span>
                   <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>
-                    233%
+                    23%
                   </span>
                 </p>
                 <p className='text-gray-500 mt-1'>
@@ -157,10 +157,11 @@ const Ecommerce = () => {
 
               {/* sparkline chart */}
               <div className='mt-5'>
-                <SparkLine 
+                <Sparkline 
                   currentColor="blue"
                   id='line-sparkline'
                   type='Line'
+                  height='80px'
                   width='250px'
                   data={SparklineAreaData}
                   color='blue'
