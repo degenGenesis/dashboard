@@ -178,6 +178,14 @@ const Ecommerce = () => {
                 />
               </div>
             </div>
+            
+            {/* stacked chart container */}
+            <div>
+              <Stacked 
+                width='320px'
+                height='360px'
+              />
+            </div>
           </div>
 
         </div>
