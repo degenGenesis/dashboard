@@ -6,8 +6,14 @@ import { Header } from '../components';
 
 const Orders = () => {
   return (
-    <div>
+    <div className='m-10 md:m-10 p02 md:p-10 bg-white rounded-3xl'>
       <Header category='Page' title='Orders' />
+      <GridComponent>
+        <ColumnsDirective>
+          {ordersGrid.map((item, index) => (<ColumnDirective key={index} {...item} /> 
+        ))}
+        </ColumnsDirective>
+      </GridComponent>
     </div>
   )
 }
