@@ -1,8 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { GridComponent, ColumnsDirective, ColumnDirective, Resize, Sort, ContextMenu, Filter, Page, ExcelExport, PdfExport, Edit, Inject } from '@syncfusion/ej2-react-grids';
+
+import { customersData, contextMenuItems, customersGrid } from '../data/dummy';
+import { Header } from '../components';
 
 const Customers = () => {
   return (
-    <div>Customers</div>
+    <div className='m-10 md:m-10 p02 md:p-10 bg-white rounded-3xl'>
+      <Header category='Page' title='Customers' />
+      <GridComponent
+        id='gridcomp'
+        dataSource={customersData}
+        allowPaging
+        allowSorting
+      >
+        <ColumnsDirective>
+          {customersGrid.map((item, index) => (<ColumnDirective key={index} {...item} /> 
+        ))}
+        </ColumnsDirective>
+        <Inject services={[Resize, Sort, ContextMenu, Filter, Page, ExcelExport, Edit, PdfExport ]} />
+      </GridComponent>
+    </div>
   )
 }
 
