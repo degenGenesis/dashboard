@@ -22,6 +22,6 @@ const Customers = () => {
       </GridComponent>
     </div>
   )
-}
+};
 
-export default Customers
+export default Customers;
