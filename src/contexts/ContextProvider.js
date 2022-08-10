@@ -13,25 +13,33 @@ const initialState = {
 
 export const ContextProvider = ({ children }) => {
   
-  // State Variables Sidebar Menu, Menu Links, Screen Width
+  // State Variables Sidebar Menu, Menu Links, Screen Width, Theme, Color, Mode
   const [screenSize, setScreenSize] = useState(undefined);
+  const [currentColor, setCurrentColor] = useState(initialState);
+  const [currentMode, setCurrentMode] = useState(false);
+  const [themeSettings, setThemeSettings] = useState(true);
   const [activeMenu, setActiveMenu] = useState(true);
   const [isClicked, setIsClicked] = useState(initialState);
+
+  // Light/Dark Mode
+  const setMode = (e) => {
+    setCurrentMode(e.target.value);
+    localStorage.setItem('themeMode', e.target.value);
+  };
+
+  // Color Theme
+  const setColor = (color) => {
+    setCurrentColor(color);
+    localStorage.setItem('colorMode', color);
+  };
 
   // Event Handling
   const handleClick = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: true});
-  }
+  };
 
   return (
-    <StateContext.Provider
-      value={{ 
-        activeMenu, setActiveMenu,
-        isClicked, setIsClicked,
-        screenSize, setScreenSize,
-        handleClick,
-      }}
-    >
+    <StateContext.Provider value={{ activeMenu, setActiveMenu, currentColor, setCurrentColor, currentMode, setCurrentMode, handleClick, isClicked, setIsClicked, initialState, screenSize, setScreenSize, setMode, setColor, themeSettings, setThemeSettings }}>
       {children}
     </StateContext.Provider>
   )
