@@ -224,6 +224,10 @@ const Ecommerce = () => {
               </div>
             </div>
 
+            <div className='mt-4'>
+              <Sparkline currentColor={currentColor} id='column-sparkline' height='100px' type='Column' data={SparklineAreaData} width='320px' color='rgb(242, 252, 253' />
+            </div>
+
           
           </div> 
         </div>
