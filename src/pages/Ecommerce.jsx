@@ -1,16 +1,27 @@
 import React from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
+import { IoIosMore } from 'react-icons/io';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
-import { Stacked, Pie, Button, Sparkline } from '../components';
-import { earningData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
+import { Stacked, Pie, Button, LineChart, Sparkline } from '../components';
+import { earningData, medicalProBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
+import product9 from '../data/product9.jpg';
+
+const DropDown = ({ currentMode }) => {
+  <div className='w-28 border-1 border-color px-2 py-1 rounded-md'>
+    <DropDownListComponent id='time' fields={{ text: 'Time', value: 'Id' }} style={{border: 'none', color: (currentMode === 'Dark') && 'white' }} value='1' dataSource={dropdownData} popupHeight='220px' popupWidth='120px' />
+  </div>
+}
 
 const Ecommerce = () => {
+  const { currentColor, currentMode } =  useStateContext();
+  
   return (
     
     // Ecommerce container
-    <div className='mt-12'>
+    <div className='mt-24'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
         
         {/* earnings container */}
@@ -27,6 +38,12 @@ const Ecommerce = () => {
               <p className='text-2xl'>$250,420.00</p>
             </div>
           </div>
+
+          {/* theme colors */}
+          {/* TODO: troubleshoot styling of download button upon implementing component theme color functionality */}
+          <button type='button' style={{backgroundColor: currentColor}} className='text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full  p-4'>
+            <BsCurrencyDollar />
+          </button>
 
           {/* download button */}
           <div className='mt-6'>
@@ -158,13 +175,13 @@ const Ecommerce = () => {
               {/* sparkline chart */}
               <div className='mt-5'>
                 <Sparkline 
-                  currentColor="blue"
+                  currentColor={currentColor}
                   id='line-sparkline'
                   type='Line'
                   height='80px'
                   width='250px'
                   data={SparklineAreaData}
-                  color='blue'
+                  color={currentColor}
                 />
               </div>
 
@@ -172,7 +189,7 @@ const Ecommerce = () => {
               <div className='mt-10'>
                 <Button 
                   color='white'
-                  bgColor='blue'
+                  bgColor={currentColor}
                   text='Download Report'
                   borderRadius='10px'
                 />
@@ -182,12 +199,29 @@ const Ecommerce = () => {
             {/* stacked chart container */}
             <div>
               <Stacked 
+                currentMode={currentMode}
                 width='320px'
                 height='360px'
               />
             </div>
           </div>
 
+        </div>
+        <div>
+          <div className='rounded-2xl md:w-400 p-4 m-3' style={{ backgroundColor: currentColor }}>
+            <div className='flex justify-between items-center'>
+              <p className='font-semibold text-white text-2xl'>
+                Earnings
+              </p>
+
+              <div>
+                <p className='text-2xl text-white font-semibold mt-8'>$63,448.78</p>
+                <p className='text-gray-200'>Monthly Revenue</p>
+              </div>
+            </div>
+
+          
+          </div> 
         </div>
       </div>
     </div>
