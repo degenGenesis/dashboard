@@ -211,13 +211,14 @@ const Ecommerce = () => {
         {/* monthly revenue, annual sales, recent transactions, sales overview, weekly stats, medical pro branding, leaders */}
         <div>
           
-          {/* monthly revenue */}
-          <div className='rounded-2xl md:w-400 p-4 m-3' style={{ backgroundColor: currentColor }}>
+          {/* earnings summary */}
+          <div className='rounded-2xl md:w-400 p-4 m-3' style={{ backgroundColor: currentColor }}>            
             <div className='flex justify-between items-center'>
               <p className='font-semibold text-white text-2xl'>
                 Earnings
               </p>
-
+              
+              {/* monthly */}
               <div>
                 <p className='text-2xl text-white font-semibold mt-8'>$63,448.78</p>
                 <p className='text-gray-200'>Monthly Revenue</p>
@@ -228,7 +229,18 @@ const Ecommerce = () => {
               <Sparkline currentColor={currentColor} id='column-sparkline' height='100px' type='Column' data={SparklineAreaData} width='320px' color='rgb(242, 252, 253' />
             </div>
 
-          
+            {/* annual */}
+            <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10'>
+              <div>
+                <p className='text-2xl font-semibold'>$43,246</p>
+                <p className='text-gray-400'>Annual Sales</p>
+              </div>
+
+              <div className='w-40'>
+                <Pie id='pie-chart' data={ecomPieChartData} legendVisibility={false} height='160px' />
+              </div>
+            </div>
+                      
           </div> 
         </div>
       </div>
