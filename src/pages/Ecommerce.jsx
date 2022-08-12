@@ -207,7 +207,11 @@ const Ecommerce = () => {
           </div>
 
         </div>
+        
+        {/* monthly revenue, annual sales, recent transactions, sales overview, weekly stats, medical pro branding, leaders */}
         <div>
+          
+          {/* monthly revenue */}
           <div className='rounded-2xl md:w-400 p-4 m-3' style={{ backgroundColor: currentColor }}>
             <div className='flex justify-between items-center'>
               <p className='font-semibold text-white text-2xl'>
