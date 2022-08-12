@@ -18,8 +18,7 @@ const DropDown = ({ currentMode }) => {
 const Ecommerce = () => {
   const { currentColor, currentMode } =  useStateContext();
   
-  return (
-    
+  return (    
     // Ecommerce container
     <div className='mt-24'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
@@ -40,8 +39,8 @@ const Ecommerce = () => {
           </div>
 
           {/* theme colors */}
-          {/* TODO: troubleshoot styling of download button upon implementing component theme color functionality */}
-          <button type='button' style={{backgroundColor: currentColor}} className='text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full  p-4'>
+          {/* TODO: troubleshoot positioning of $ icon (<BsCurrencyDollar />) interfering with desired position of download button */}
+          <button type='button' style={{backgroundColor: currentColor}} className='text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full p-4'>
             <BsCurrencyDollar />
           </button>
 
@@ -240,7 +239,7 @@ const Ecommerce = () => {
                 <Pie id='pie-chart' data={ecomPieChartData} legendVisibility={false} height='160px' />
               </div>
             </div>
-                      
+
           </div> 
         </div>
       </div>
