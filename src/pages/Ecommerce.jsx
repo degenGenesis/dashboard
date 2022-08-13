@@ -38,8 +38,13 @@ const Ecommerce = () => {
             </div>
           </div>
 
-          {/* theme colors */}
-          {/* TODO: troubleshoot positioning of $ icon (<BsCurrencyDollar />) interfering with desired position of download button */}
+          
+          {/**
+           * currency icon
+           *  //! Settings menu opening on page load issue occurs when this is implemented
+           * //! <BsCurrencyDollar />💲 icon causing unexpected behavior w/ download button element
+           * //TODO: Check tailwind declarations of both elements
+          */}
           <button type='button' style={{backgroundColor: currentColor}} className='text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full p-4'>
             <BsCurrencyDollar />
           </button>
