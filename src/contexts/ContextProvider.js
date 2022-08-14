@@ -13,7 +13,7 @@ const initialState = {
 
 export const ContextProvider = ({ children }) => {
   
-  // State Variables Sidebar Menu, Menu Links, Screen Width, Theme, Color, Mode
+  // State Management
   const [screenSize, setScreenSize] = useState(undefined);
   const [currentColor, setCurrentColor] = useState(initialState);
   const [currentMode, setCurrentMode] = useState(false);
