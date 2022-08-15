@@ -41,7 +41,6 @@ const Ecommerce = () => {
           
           {/**
            * currency icon
-           *  //! Settings menu opening on page load issue occurs when this is implemented
            * //! <BsCurrencyDollar />💲 icon causing unexpected behavior w/ download button element
            * //TODO: Check tailwind declarations of both elements
           */}
