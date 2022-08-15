@@ -45,7 +45,7 @@ const Ecommerce = () => {
            * //! <BsCurrencyDollar />💲 icon causing unexpected behavior w/ download button element
            * //TODO: Check tailwind declarations of both elements
           */}
-          <button type='button' style={{backgroundColor: currentColor}} className='text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full p-4'>
+          <button type='button' style={{ backgroundColor: currentColor }} className='text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full p-4'>
             <BsCurrencyDollar />
           </button>
 
@@ -213,24 +213,21 @@ const Ecommerce = () => {
         </div>
         
         {/* monthly revenue, annual sales, recent transactions, sales overview, weekly stats, medical pro branding, leaders */}
-        <div>
-          
+        <div>          
           {/* earnings summary */}
           <div className='rounded-2xl md:w-400 p-4 m-3' style={{ backgroundColor: currentColor }}>            
             <div className='flex justify-between items-center'>
               <p className='font-semibold text-white text-2xl'>
                 Earnings
-              </p>
-              
+              </p>              
               {/* monthly */}
               <div>
                 <p className='text-2xl text-white font-semibold mt-8'>$63,448.78</p>
                 <p className='text-gray-200'>Monthly Revenue</p>
               </div>
             </div>
-
             <div className='mt-4'>
-              <Sparkline currentColor={currentColor} id='column-sparkline' height='100px' type='Column' data={SparklineAreaData} width='320px' color='rgb(242, 252, 253' />
+              <Sparkline currentColor={currentColor} id='column-sparkline' height='100px' type='Column' data={SparklineAreaData} width='320px' color='rgb(242, 252, 253)' />
             </div>
 
             {/* annual */}
