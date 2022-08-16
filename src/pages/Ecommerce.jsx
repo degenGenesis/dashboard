@@ -276,6 +276,7 @@ const Ecommerce = () => {
                 <Button color='white' bgColor={currentColor} text='Add' borderRadius='18px' />
               </div>
 
+              <p className='text-gray-400 text-sm'>36 Recent Transactions</p>
             </div>
           </div>
         </div>
