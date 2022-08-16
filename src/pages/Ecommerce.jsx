@@ -19,16 +19,10 @@ const Ecommerce = () => {
   const { currentColor, currentMode } =  useStateContext();
   
   return (    
-    // Ecommerce container
+    
     <div className='mt-24'>
       <div className='flex flex-wrap lg:flex-nowrap justify-center'>
-        
-        {/* earnings container */}
-        <div className='
-          bg-white dark:text-gray-200 dark:bg-secondary-dark-bg 
-          h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 
-          bg-hero-pattern bg-no-repeat bg-cover bg-center'
-        >
+        <div className='bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center'>
           
           {/* earnings */}
           <div className='flex justify-between items-center'>
@@ -55,7 +49,7 @@ const Ecommerce = () => {
               bgColor='blue'
               text='Download'
               borderRadius='10px'
-              // size='xl'
+              size='xl'
             />
           </div>
         </div>
@@ -65,42 +59,23 @@ const Ecommerce = () => {
         
         {/* revenue sources */}
           {earningData.map((item) => (
-            <div
-              key={item.title}
-              className='bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'
-            >
+            <div key={item.title} className='bg-white h-44 dark:text-gray-200 dark:bg-secondary-dark-bg md:w-56 p-4 pt-9 rounded-2xl'>
 
               {/* revenue source buttons */}
-              <button 
-                type='button'
-                style={{ color: item.iconColor, backgroundColor: item.iconBg }}
-                className='text-2xl opacity-0.9 rounded-full p-4 hover:drop-shadow-xl'  
-              >
+              <button type='button' style={{ color: item.iconColor, backgroundColor: item.iconBg }} className='text-2xl opacity-0.9 rounded-full p-4 over:drop-shadow-xl'>
                 {item.icon}
               </button>
 
               {/* financial data */}
               <p className='mt-3'>
-
-                {/* amount */}
-                <span className='text-lg font-semibold'>
-                 $ {item.amount}
-                </span>
-
-                {/* percent */}
-                <span className={`text-sm text-${item.pcColor} ml-2`}>
-                  {item.percentage}
-                </span>
+                <span className='text-lg font-semibold'> $ {item.amount} </span>
+                <span className={`text-sm text-${item.pcColor} ml-2`}> {item.percentage} </span>
               </p>
 
               {/* revenue source title */}
-              <p className='text-sm text-gray-400 mt-1'>
-                {item.title}
-              </p>
-
+              <p className='text-sm text-gray-400 mt-1'>{item.title}</p>
             </div>
-          ))}
-          
+          ))}          
         </div>
       </div>
       
@@ -119,22 +94,14 @@ const Ecommerce = () => {
               
               {/* expense key */}
               <p className='flex items-center gap-2 text-gray-600 hover:drop-shadow-xl'>
-                <span>
-                  <GoPrimitiveDot />
-                </span>
-                <span>
-                  Expense
-                </span>
+                <span> <GoPrimitiveDot /> </span>
+                <span>Expense</span>
               </p>
 
               {/* budget key */}
               <p className='flex items-center gap-2 text-green-400 hover:drop-shadow-xl'>
-                <span>
-                  <GoPrimitiveDot />
-                </span>
-                <span>
-                  Budget
-                </span>
+                <span> <GoPrimitiveDot /> </span>
+                <span>Budget</span>
               </p>
 
             </div>
@@ -149,16 +116,10 @@ const Ecommerce = () => {
                 
                 {/* budget */}
                 <p>
-                  <span className='text-3xl font-semibold'>
-                    $93,438
-                  </span>
-                  <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>
-                    23%
-                  </span>
+                  <span className='text-3xl font-semibold'>$93,438</span>
+                  <span className='p-1.5 hover:drop-shadow-xl cursor-pointer rounded-full text-white bg-green-400 ml-3 text-xs'>23%</span>
                 </p>
-                <p className='text-gray-500 mt-1'>
-                  Budget
-                </p>
+                <p className='text-gray-500 mt-1'>Budget</p>
               </div>
 
               {/* Expense data container */}
@@ -166,13 +127,9 @@ const Ecommerce = () => {
 
                 {/* expense */}
                 <p>
-                  <span className='text-3xl font-semibold'>
-                    $48,107
-                  </span>
+                  <span className='text-3xl font-semibold'>$48,107</span>
                 </p>
-                <p className='text-gray-500 mt-1'>
-                  Expense
-                </p>
+                <p className='text-gray-500 mt-1'>Expense</p>
               </div>
 
               {/* sparkline chart */}
@@ -292,6 +249,7 @@ const Ecommerce = () => {
           </div>
         </div>
 
+        {/* weekly stats */}
         <div className='mt-10'>
           {weeklyStats.map((item) => (
             <div key={item.title} className='flex justify-between mt-4 w-full'>
