@@ -320,8 +320,16 @@ const Ecommerce = () => {
           </div>
 
           <p className='text-gray-400 text-sm'>36 Recent Txn's</p>
-        </div>
-            
+        </div>            
+      </div>
+      {/* daily activities */}
+      <div className='w-400 bg-white dark:bg-secondary-dark-bg rounded-2xl p-6 m-3'>
+        <div className='flex justify-between'>
+          <p className='text-xl font-semibold'>Daily Activities</p>
+          <button type='button' className='text-xl font-semibold text-gray-500'>
+            <IoIosMore />
+          </button>
+        </div> 
       </div>
     </div>
   )
