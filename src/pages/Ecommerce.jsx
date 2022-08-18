@@ -316,7 +316,7 @@ const Ecommerce = () => {
 
         <div className='flex justify-between items-center mt-5 border-t-1 border-color'>
           <div className='mt-3'>
-            <Button color='white' bgColor={currentColor} text='Add' border-radius='10px' />
+            <Button color='white' bgColor={currentColor} text='Add' borderRadius='10px' />
           </div>
 
           <p className='text-gray-400 text-sm'>36 Recent Txn's</p>
@@ -329,7 +329,19 @@ const Ecommerce = () => {
           <button type='button' className='text-xl font-semibold text-gray-500'>
             <IoIosMore />
           </button>
-        </div> 
+        </div>
+
+        <div className='mt-10'>
+          <img className='md:w-96 h-50' src={product9} alt='' />
+          <div className='mt-8'>
+            <p className='font-semibold text-lg'>React 18 coming soon!</p>
+            <p className='text-gray-400'>By Trevor J</p>
+            <p className='mt-8 text-sm text-gray-400'>News Column</p>
+            <div className='mt-3'>
+              <Button color='white' bgColor={currentColor} text='Read More' borderRadius='10px' />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
