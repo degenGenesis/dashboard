@@ -10,7 +10,7 @@ const Cart = () => {
   const { currentColor } = useStateContext();
 
   return (
-    <div className='bg-half-transparent w-full fixed nac-item top-0 right-0'>
+    <div className='bg-half-transparent w-full fixed nav-item top-0 right-0'>
       <div className='float-right h-screen duration-1000 ease-in-out dark:text-gray-200 transition-all dark:bg-[#484B52] bg-white md:w-400 p-8'>
         <div className='flex justify-between items-center'>
           <p className='font-semibold text-lg'>Shopping Cart</p>
@@ -26,7 +26,7 @@ const Cart = () => {
           <div key={index}>
             <div>
               <div className='flex items-center leading-8 gap-5 border-b-1 border-color dark:border-gray-600 p-4'>
-                <img className='rounded-lg h-80 w-24' src='{item.image}' alt='' />
+                <img className='rounded-lg h-80 w-24' src={item.image} alt='' />
                 <div>
                   <p className='font-semibold'>{item.name}</p>
                   <p className='text-gray-600 dark:text-gray-400 text-sm font-semibold'>{item.category}</p>
