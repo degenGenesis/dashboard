@@ -18,12 +18,15 @@ const Stacked = ({ width, height }) => {
       background={currentMode === 'Dark' ? '#33373E' : '#fff'}
       legendSettings={{ background: 'white' }}
       >
+
+      {/* displays stacked chart data */}
       <Inject 
         services={[Legend, Category, StackingColumnSeries, Tooltip]} 
       />
       <SeriesCollectionDirective>
         {stackedCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} /> )}
       </SeriesCollectionDirective>
+      
     </ChartComponent>
   )
 }
