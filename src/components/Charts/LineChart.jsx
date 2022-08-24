@@ -18,10 +18,13 @@ const LineChart = () => {
       background={currentMode === 'Dark' ? '#33373E' : '#fff' }
       legendSettings={{ background: 'white' }}
     >
+      
+      {/* displays line chart data */}
       <Inject services={[LineSeries, DateTime, Legend, Tooltip ]} />
       <SeriesCollectionDirective>
         {lineCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
       </SeriesCollectionDirective>
+      
     </ChartComponent>
   )
 };
