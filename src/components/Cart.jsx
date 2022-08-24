@@ -54,7 +54,7 @@ const Cart = () => {
           </div>
         </div>
         <div className='mt-5'>
-          <Button 
+          <Button // TODO: add onClick function
             color='white'
             bgColor={currentColor}
             text='Place Order'
