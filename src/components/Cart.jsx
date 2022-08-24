@@ -43,6 +43,25 @@ const Cart = () => {
             </div>
           </div> 
         ))}
+        <div className='mt-3 mb-3'>
+          <div className='flex justify-between items-center'>
+            <p className='text-gray-500 dark:text-gray-200'>Sub Total</p>
+            <p className='font-semibold'>$890.00</p>
+          </div>
+          <div className='flex justify-between items-center mt-3'>
+            <p className='text-gray-500 dark:text-gray-200'>Total</p>
+            <p className='font-semibold'>$890.00</p>
+          </div>
+        </div>
+        <div className='mt-5'>
+          <Button 
+            color='white'
+            bgColor={currentColor}
+            text='Place Order'
+            borderRadius='10px'
+            width='full'
+          />
+        </div>
       </div>
     </div>
   )
