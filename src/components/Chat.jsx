@@ -1,3 +1,4 @@
+// ! IMPORTANT: (1) TODO item
 import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
 
@@ -39,6 +40,15 @@ const Chat = () => {
             </div>
           </div>
         ))}
+        <div className='mt-5'>
+          <Button // TODO: add onClick function
+            color='white'
+            bgColor={currentColor}
+            text='View All'
+            borderRadius='10px'
+            width='full'
+          />
+        </div>
       </div>
     </div>
   )
