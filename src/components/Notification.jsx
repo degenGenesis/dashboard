@@ -27,10 +27,19 @@ const Notification = () => {
               </div>
             </div>
           ))}
+          <div className='mt-5'>
+            <Button 
+              color='white'
+              bgColor={currentColor} 
+              text='View All' 
+              borderRadius='10px' 
+              width='full'
+            />  
+          </div>
         </div>
       </div>
     </div>
   )
-}
+};
 
-export default Notification
+export default Notification;
