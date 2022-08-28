@@ -1,3 +1,4 @@
+// ! IMPORTANT (1) TODO item
 import React from 'react';
 import { MdOutlineCancel } from 'react-icons/md';
 
@@ -16,7 +17,7 @@ const Notification = () => {
           <p className='font-semibold text-lg dark:text-gray-200'>Notifications</p>
           <button type='button' className='text-white text-xs rounded p-1 px-2 bg-orange-theme'>5 new</button>
         </div>
-        <Button 
+        <Button // TODO: add onClick function
           icon={<MdOutlineCancel />}
           color='rgb(153, 171, 180)'
           bgHoverColor='light-gray'
