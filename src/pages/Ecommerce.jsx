@@ -1,4 +1,4 @@
-// ! IMPORTANT (1) TODO item (Line 226-229)
+// ! IMPORTANT (1) TODO item (Line 289-292)
 import React from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
@@ -33,12 +33,6 @@ const Ecommerce = () => {
                 <p className="font-bold text-gray-400">Earnings</p>
                 <p className="text-2xl">$63,448.78</p>
               </div>
-
-              {/**
-               * currency icon
-               * //! <BsCurrencyDollar />💲 icon causing unexpected behavior w/ download button element
-               * //TODO: Check tailwind declarations of both elements
-              */}
               
               <button
                 type="button"
