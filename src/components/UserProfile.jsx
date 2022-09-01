@@ -65,6 +65,19 @@ const UserProfile = () => {
         ))}
 
       </div>
+
+      <div className='mt-5'>
+        
+        <Button 
+          color='white'
+          bgColor={currentColor}
+          text='Logout'
+          borderRadius='10px'
+          width='full'
+        />
+
+      </div>
+      
     </div>
   )
 }
