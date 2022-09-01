@@ -62,7 +62,7 @@ const UserProfile = () => {
 
           </div>
 
-        ))}
+        ))};
 
       </div>
 
@@ -80,6 +80,6 @@ const UserProfile = () => {
       
     </div>
   )
-}
+};
 
-export default UserProfile
+export default UserProfile;
