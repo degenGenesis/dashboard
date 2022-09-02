@@ -17,7 +17,7 @@ const UserProfile = () => {
 
         <p className='font-semibold text-lg dark:text-gray-200'>User Profile</p>
         <Button 
-          icon={MdOutlineCancel}
+          icon={<MdOutlineCancel />}
           color='rgb(153, 171, 180)'
           bgHoverColor='light-gray'
           size='2xl'
