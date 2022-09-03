@@ -211,7 +211,7 @@ const Ecommerce = () => {
                 height="100px" 
                 type="Column" 
                 data={SparklineAreaData} 
-                width="320" 
+                width='320px' 
                 color="rgb(242, 252, 253)" 
               />
 
