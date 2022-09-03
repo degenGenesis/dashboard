@@ -16,7 +16,6 @@ const Sparkline = ({ id, height, width, color, data, type, currentColor }) => {
       xName='x'
       yName='yval'
       type={type}
-      // displays chart data on hover
       tooltipSettings={{ 
         visible: true,
         // eslint-disable-next-line no-template-curly-in-string
