@@ -35,7 +35,7 @@ class Sparkline extends React.PureComponent {
         <Inject services={[SparklineTooltip]} />
       </SparklineComponent>
     )
-  }
+  };
 };
 
 export default Sparkline;
