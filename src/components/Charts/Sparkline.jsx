@@ -1,7 +1,5 @@
 import React from 'react';
 import { SparklineComponent, Inject, SparklineTooltip } from '@syncfusion/ej2-react-charts';
-import { render } from 'react-dom';
-
 
 class Sparkline extends React.PureComponent {
   render () {
