@@ -51,7 +51,8 @@ const ThemeSettings = () => {
 
         {/* dark mode */}
         <div className='mt-2'>
-        <input 
+
+          <input 
             type='radio'
             id='dark'
             name='theme'
