@@ -20,7 +20,7 @@ const Ecommerce = () => {
   const { currentColor, currentMode } = useStateContext();
 
   return (
-    <div className="mt-10">
+    <div className="mt-5">
 
         <div className="flex flex-wrap lg:flex-wrap justify-center ">
 
