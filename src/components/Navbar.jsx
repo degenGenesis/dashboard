@@ -18,7 +18,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
     position='BottomCenter'>
     <button 
       type='button'
-      onClick={customFunc}
+      onClick={() => customFunc()}
       style={{ color }}
       className='relative text-xl rounded-full p-3 hover:bg-light-gray'
     >
@@ -34,7 +34,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 const Navbar = () => {
   
   // state variables
-  const { activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, screenSize, setScreenSize } = useStateContext();
+  const { currentColor, activeMenu, setActiveMenu, handleClick, isClicked, setIsClicked, screenSize, setScreenSize } = useStateContext();
 
   // event handling
   useEffect(() => {
@@ -55,14 +55,16 @@ const Navbar = () => {
     }
   }, [screenSize]);
 
+  const handleActiveMenu = () => setActiveMenu(!activeMenu);
+
   return (
     <div className='flex justify-between p-2 md:ml-6 md:mr-6 relative'>
       
       {/* hamburger menu */}
       <NavButton 
-        title='Sidebar menu' 
-        customFunc={() => setActiveMenu((prevActiveMenu) => !prevActiveMenu)} 
-        color='blue'
+        title='Menu' 
+        customFunc={handleActiveMenu} 
+        color={currentColor}
         icon={<AiOutlineMenu />} 
       />
 
@@ -71,7 +73,7 @@ const Navbar = () => {
         <NavButton 
           title='Cart' 
           customFunc={() => handleClick('cart')} 
-          color='blue'
+          color={currentColor}
           icon={<FiShoppingCart />} 
         />
 
@@ -80,7 +82,7 @@ const Navbar = () => {
           title='Chat'
           dotColor='03C907' 
           customFunc={() => handleClick('chat')} 
-          color='blue'
+          color={currentColor}
           icon={<BsChatLeft />} 
         />
 
@@ -88,7 +90,7 @@ const Navbar = () => {
         <NavButton 
           title='Notifications' 
           customFunc={() => handleClick('notification')} 
-          color='blue'
+          color={currentColor}
           icon={<RiNotification3Line />} 
         />
 
