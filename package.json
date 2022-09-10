@@ -2,7 +2,7 @@
   "name": "project_syncfusion_dashboard",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://degengenesis.github.io/dashboard",
+  "homepage": "https://degengenesis.github.io/dashboard",
   "dependencies": {
     "@syncfusion/ej2": "^19.4.48",
     "@syncfusion/ej2-react-calendars": "^19.4.48",
@@ -26,7 +26,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b main -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
