@@ -15,7 +15,7 @@ export const ContextProvider = ({ children }) => {
   
   // State Management
   const [screenSize, setScreenSize] = useState(undefined);
-  const [currentColor, setCurrentColor] = useState(initialState);
+  const [currentColor, setCurrentColor] = useState(true);
   const [currentMode, setCurrentMode] = useState(false);
   const [themeSettings, setThemeSettings] = useState(false);
   const [activeMenu, setActiveMenu] = useState(true);
