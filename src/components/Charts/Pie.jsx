@@ -18,7 +18,7 @@ const Doughnut = ({ id, data, legendVisibility, height }) => {
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective
           name='Sale'
-          dateSource={data}
+          dataSource={data}
           xName='x'
           yName='y'
           innerRadius='40%'
